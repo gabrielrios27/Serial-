@@ -18,7 +18,9 @@
     align-items: center;
     .main__video {
       height: 135%;
+      -o-object-fit: cover;
       object-fit: cover;
+      -o-object-position: center;
       object-position: center;
     }
   }
@@ -37,16 +39,11 @@
   transition: all 0.3s linear;
 
   .prelogin__titlesContainer {
-    padding-bottom: 146px;
+    padding-top: 146px;
     .prelogin__title {
       font-weight: 400;
-      font-size: 34px;
-    }
-    .prelogin__subtitle {
-      font-weight: 400;
-      font-size: 26px;
-      transition: all 0.3s linear;
-      margin-top: 2.625rem;
+      font-size: 24px;
+      font-family: "AkiraExpanded";
     }
   }
   .prelogin__btnContainer {
@@ -123,7 +120,6 @@
       right: 0;
     }
     .login__title {
-      font-family: "AkiraExpanded";
       font-size: 34px;
       font-weight: 500;
       margin-bottom: 8px;

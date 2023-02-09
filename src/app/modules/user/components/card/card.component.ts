@@ -9,6 +9,8 @@ import { TvShow } from '../../interfaces/user';
 })
 export class CardComponent implements OnInit {
   @Input() tvShow: TvShow;
+  @Input() image: any;
+  scri: string = '';
 
   cardOpen: boolean;
 
