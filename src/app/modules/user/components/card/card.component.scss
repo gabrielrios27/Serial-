@@ -1,13 +1,15 @@
 .card {
   width: 100%;
-  //   max-width: 160px;
-  max-width: 336px;
+  max-width: 160px;
+  //   max-width: 336px;
 
   //   max-width: 104px;
   //   max-width: 219px;
   //   height: 155px;
   display: flex;
   overflow: hidden;
+  height: 240px;
+  transition: all 0.3s linear;
   .card__img {
     width: 160px;
     // width: 104px;
@@ -19,6 +21,7 @@
     padding: 0 14px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     .card__close {
       width: 17px;
       padding: 3px 6px;
@@ -38,6 +41,9 @@
       margin-top: 30px;
     }
   }
+}
+.card--expand {
+  max-width: 336px;
 }
 .actions {
   margin-top: 10px;

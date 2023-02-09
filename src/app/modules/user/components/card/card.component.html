@@ -1,10 +1,11 @@
-<section class="card">
+<section class="card" [ngClass]="cardOpen ? 'card--expand' : ''">
   <img
     class="card__img"
     src="../../../../../assets/images/image 27.png"
     alt=""
+    (click)="openCard()"
   />
-  <div class="card__container">
+  <!-- <div class="card__container">
     <svg
       class="card__close"
       (click)="closeCard()"
@@ -36,5 +37,5 @@
       <img class="actions__more" src="" alt="" />
       <img class="actions__play" src="" alt="" />
     </div>
-  </div>
+  </div> -->
 </section>

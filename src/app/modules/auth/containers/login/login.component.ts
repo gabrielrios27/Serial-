@@ -24,9 +24,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
   flagSeePassword: boolean = false;
   constructor(private router: Router) {
     this.visible = false;
-    this.login = true;
+    this.login = false;
     this.register = false;
-    this.preLogin = false;
+    this.preLogin = true;
     this.success = false;
   }
 

@@ -4,32 +4,30 @@
       <source src="../../../../../assets/videos/1899.mp4" type="video/mp4" />
     </video>
   </div>
-  <h2 class="logo">SERIAL</h2>
+  <!-- <h2 class="logo">SERIAL</h2> -->
+  <img
+    class="logo"
+    src="../../../../../assets/icons/logo.svg"
+    alt="Logo Serial app"
+  />
   <!-- [ngClass]="!login ? 'show' : 'notShow'" -->
   <div class="prelogin" *ngIf="preLogin">
     <!-- <img class="prelogin__logo" src="" alt="" /> -->
 
     <section class="prelogin__titlesContainer">
       <h1 class="prelogin__title">
-        SHARE YOUR VIEWS WITH SERIEPHILOS FROM ALL OVER THE WORLD
+        SHED SOME LIGHT OVER YOUR FAVORITE TV SHOWS
       </h1>
       <!-- <h1 class="prelogin__title">
     COMPARTE TUS OPINIONES CON SERIEFILOS DE TODO EL MUNDO
   </h1> -->
-
-      <h2
-        class="prelogin__subtitle"
-        [ngClass]="visible ? 'visible' : 'invisible'"
-      >
-        SIGN UP FREE
-      </h2>
     </section>
     <section
       class="prelogin__btnContainer"
       [ngClass]="visible ? 'visible' : 'invisible'"
     >
       <button class="prelogin__btn" (click)="toogleLogin('register')">
-        REGISTER
+        SIGN UP FOR FREE
       </button>
 
       <a class="prelogin__already" (click)="toogleLogin('login')">
