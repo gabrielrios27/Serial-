@@ -6,6 +6,8 @@ import {
   ViewChild,
 } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,12 +15,19 @@ import {
 })
 export class LoginComponent implements OnInit, AfterViewInit {
   visible: boolean;
+  preLogin: boolean;
   login: boolean;
+  register: boolean;
+  success: boolean;
   @ViewChild('videoHome', { static: false }) videoHome!: ElementRef;
 
-  constructor() {
+  flagSeePassword: boolean = false;
+  constructor(private router: Router) {
     this.visible = false;
     this.login = true;
+    this.register = false;
+    this.preLogin = false;
+    this.success = false;
   }
 
   ngOnInit(): void {
@@ -37,10 +46,36 @@ export class LoginComponent implements OnInit, AfterViewInit {
       this.visible = true;
     }, 3000);
   }
-  toogleLogin() {
-    this.login = true;
+  toogleLogin(value: string) {
+    if (value === 'login') {
+      this.login = true;
+      this.preLogin = false;
+      this.register = false;
+    } else if (value === 'register') {
+      this.login = false;
+      this.preLogin = false;
+      this.register = true;
+    } else {
+      this.preLogin = true;
+      this.register = false;
+      this.login = false;
+    }
   }
   close() {
     this.login = false;
+  }
+  changeType() {
+    let element: any = document.getElementById('password');
+    if (element.type === 'text') {
+      this.flagSeePassword = false;
+      element.type = 'password';
+    } else {
+      this.flagSeePassword = true;
+      element.type = 'text';
+    }
+  }
+  toogleSuccess(value: boolean) {
+    this.success = value;
+    this.router.navigate(['user']);
   }
 }
